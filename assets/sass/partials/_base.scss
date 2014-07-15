@@ -1,0 +1,35 @@
+$max-width: 1900px;
+
+$baseFont: "Droid Serif", serif;
+$baseSizeFont: 24px;
+$baseLineHeight: 35px;
+$titleFont: "Great vibes", Arial;
+$contentFont: "Ubuntu Condensed", Arial;
+$baseFontSize: 20px;
+$light: 100;
+$regular: 400;
+$bold: 600;
+
+$baseColor: #FFF;
+$baseDarkColor: #511554;
+$baseBackground: #6F1E73;
+
+$mobile: new-breakpoint(max-device-width 800px 12);
+$heightMenuDeviceIcon: 100px;
+$heightMenuDevice: 200px;
+$paddingTopContent: $heightMenuDeviceIcon + $heightMenuDevice + 20px;
+
+$h2FontSize: 62px;
+$h2Width: 75%;
+$h2Indent: 50px;
+
+$h3Size: 50px;
+$h3MediumSize: 40px;
+$h3SmallSize: 35px;
+
+$tableWidth: 60%;
+
+html, body {
+  @include size(100% 100%);
+  color: $baseColor;
+}

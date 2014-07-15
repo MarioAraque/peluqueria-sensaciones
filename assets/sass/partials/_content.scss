@@ -1,0 +1,141 @@
+#content {
+  @include size(100% 100%);
+  @include outer-container();
+  @include row(table);
+  background-color: $baseBackground;
+  font: $light $baseFontSize $baseFont;
+}
+
+p {
+  @include margin(null null 15px null);
+}
+
+h3 {
+  @include margin(0 auto 30px auto);
+  font: $regular $h3Size $titleFont;
+  text-align: center;
+
+  &.middle-size {
+    font-size: $h3MediumSize;
+  }
+
+  &.small-size {
+    font-size: $h3SmallSize;
+  }
+}
+
+table {
+  @include margin(0 auto 30px auto);
+  width: $tableWidth;
+
+  .right {
+    text-align: right;
+  }
+}
+
+.note {
+  @include margin(-20px auto 30px auto);
+  font-size: 17px;
+  line-height: 20px;
+  width: 60%;
+}
+
+#main {
+  @include span-columns(8);
+  float: right;
+  display: block;
+  font: $light #{$baseSizeFont}/#{$baseLineHeight} $contentFont;
+
+  > div {
+    @include size(100% auto);
+    @include position(relative);
+    @include padding(2.5%);
+    @include transition(padding 0.4s ease-in);
+    border-top: solid 1px $baseColor;
+    display: inline-block;
+    background-color: $baseBackground;
+  }
+
+  &.with-menu-displayed {
+    > div {
+      @include padding($paddingTopContent null null null);
+    }
+  }
+
+  .section-centered {
+    @include position(relative, 50% null null null);
+    @include transform(translateY(-50%));
+  }
+
+  @include media($mobile) {
+    @include span-columns(12);
+
+    > div {
+      @include padding($heightMenuDeviceIcon null null null);
+    }
+  }
+}
+
+.home {
+  > div {
+    @include pad();
+    @include position(relative);
+  }
+
+  img {
+    @include size(100% auto);
+  }
+
+  .home-slide {
+    @include margin(60px auto);
+    width: 70%;
+    max-width: 600px;
+    max-height: 470px;
+    overflow: hidden;
+  }
+}
+
+.bx-controls {
+  display: none;
+}
+
+.where {
+  > div {
+    @include pad();
+    width: 100%;
+    text-align: center;
+  }
+
+  h3 {
+    @include margin(null null 10px null);
+
+    &.last {
+      @include margin(40px null null null);
+    }
+  }
+
+  .map {
+    @include margin(70px auto 0px auto);
+    @include padding(null null 150px null);
+    @include size(100% 500px);
+
+    > div {
+      @include margin(0 auto);
+    }
+  }
+
+  a {
+    @include position(relative);
+    @include padding(null null null 35px);
+    color: #FFF;
+    text-decoration: none;
+
+    .icon {
+      @include position(absolute, 0 null null 0);
+    }
+
+    @include media($mobile) {
+      @include padding(null null null 50px);
+    }
+  }
+}

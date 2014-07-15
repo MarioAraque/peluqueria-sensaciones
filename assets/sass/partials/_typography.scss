@@ -1,0 +1,42 @@
+@include font-face(icomoon, '../fonts/icomoon');
+
+.icon {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-comb:before {
+  content: "\e600";
+}
+
+.icon-dryer:before {
+  content: "\e601";
+}
+
+.icon-hairbrush:before {
+  content: "\e602";
+}
+
+.icon-menu:before {
+  content: "\e603";
+}
+
+.icon-scissors:before {
+  content: "\e604";
+}
+
+.icon-marker:before {
+  content: "\e605";
+}
+
+.icon-phone:before {
+  content: "\e606";
+}

@@ -1,0 +1,47 @@
+div.home
+  div
+    div
+      p Peluquería Sensaciones abrió sus puertas en Octubre de 2007. Ofrecemos un servicio profesional y adaptado a tus necesidades.
+      p Disponemos de descuentos para mayores de 65 años los lunes por la mañana.
+      p Podrás recibir un análisis del cabello gratuito por ser nuestra cliente.
+    div.home-slide
+      ul.slide
+        each val in ['img1', 'img2', 'img3', 'img4']
+          li
+            img(src="assets/img/" + val + ".jpg")
+div.prices
+  div
+    h3 Servicios y tarifas
+    table
+      each price, service in {'Corte':'11', 'Lavar y marcar con rulos':'8', 'Lavar y secar/corto':'10', 'Lavar y secar/melena':'12', 'Lavar y secar/medio largo':'15', 'Lavar y secar/largo':'18,50', 'Color desde/corto':'10,50', 'Color desde/melena':'14', 'Color desde/medio largo':'18', 'Color desde/largo':'21', 'Mechas a peine/corto':'11', 'Mechas a peine/melena':'16', 'Mechas a gorro/corto':'16', 'Mechas a gorro/melena':'25', 'Mechas a plata/corto':'18', 'Mechas a plata/melena':'27', 'Mechas a plata/medio largo':'35', 'Mechas a plata/largo':'45', 'Moldeado/corto':'22', 'Moldeado/melena':'27', 'Moldeado/medio largo':'36'}
+        tr
+          td= service
+          td.right= price + "€"
+    p.note **Excepto mascarillas y ampollas, todos los suplementos vienen incluidos en el servicio (champú,espuma,crema... ) **
+    h3.middle-size Suplementos
+    table
+      each price, service in {'Mascarilla/Ampolla anticaída/Ampolla queratina':'3'}
+        tr
+          td= service
+          td.right= price + '€'
+    h3.small-size Lunes por la mañana pidiendo cita, mayores de 65 años
+    table
+      each price, service in {'Lavar y marcar con rulos':'7', 'Corte':'8', 'Color desde':'9'}
+        tr
+          td= service
+          td.right= price + '€'
+    p.note **Excepto mascarillas y ampollas, todos los suplementos vienen incluidos en el servicio (champú,espuma,crema...) **
+div.where
+  div
+    div.how-to-get
+      h3 ¿Dónde estamos?
+      p Calle Brasil Nº20
+      p 
+        a(href="tel:962057666") Teléfono 96 205 76 66
+          span.icon.icon-phone
+      p CITA PREVIA
+      p 46018 - Valencia
+      h3.last ¿Cómo llegar?
+      p Metro: Líneas 3 y 5, parada Avenida del Cid.
+      p Autobús: Líneas 81 y 29, parada Brasil.
+    div.map#mapid-87d2271b-9f29-4a52-a6ab-6ee8b355ad6d

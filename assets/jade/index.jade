@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    include inc/head.jade
+body
+  div#content
+    aside#aside
+      include inc/header
+      include inc/menu
+    main#main
+      include inc/content
+
+  script(type="text/javascript", src="assets/javascript/script.js")
+  script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAlQ4Cu-yW_2VNNjSOybvjzJoArtj6fbw&sensor=false")
+  script(type="text/javascript", src="http://www.map-generator.org/map/iframejs/87d2271b-9f29-4a52-a6ab-6ee8b355ad6d?key=AIzaSyAAlQ4Cu-yW_2VNNjSOybvjzJoArtj6fbw&width=400px&height=400px")

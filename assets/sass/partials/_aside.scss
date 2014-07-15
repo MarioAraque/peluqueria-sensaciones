@@ -1,0 +1,30 @@
+#aside {
+  @include span-columns(4);
+  @include position(fixed, 0 null null 0);
+  height: 100%;
+  @include linear-gradient(to bottom, #F7EDF7 0%, #E882ED 100%);
+
+  h2 {
+    @include margin(15px auto 25px auto);
+    width: $h2Width;
+    font: $bold $h2FontSize $titleFont;
+    font-size: 5.4vw;
+    color: $baseBackground;
+
+    .indent {
+      @include padding(null null null $h2Indent);
+    }
+  }
+
+  @include media($mobile) {
+    @include position(fixed, 0 null null 0);
+    @include span-columns(12);
+    @include size(100% auto);
+    z-index: 999;
+
+
+    h2 {
+      display: none;
+    }
+  }
+}
