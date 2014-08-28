@@ -82,8 +82,8 @@
 
   .logo-mini {
     @include position(absolute, 50% 15px null null);
-    @include margin(-25px null null null);
-    @include size(80px auto);
+    @include margin(-45px null null null);
+    @include size(140px auto);
   }
 
   @include media($mobile) {

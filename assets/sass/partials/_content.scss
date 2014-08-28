@@ -8,6 +8,11 @@
 
 p {
   @include margin(null null 15px null);
+
+  @include media($mobile) {
+    font-size: 40px;
+    line-height: 45px;
+  }
 }
 
 h3 {
@@ -112,6 +117,10 @@ table {
     &.last {
       @include margin(40px null null null);
     }
+
+    @include media($mobile) {
+      font-size: $mobile-where-section-title;
+    }
   }
 
   .map {
@@ -137,5 +146,21 @@ table {
     @include media($mobile) {
       @include padding(null null null 50px);
     }
+  }
+}
+
+.mobile-logo {
+  display: none;
+  text-align: center;
+  font: $bold $mobile-logo $titleFont;
+
+  p {
+    @include margin(20px 0px);
+    font-size: $mobile-logo;
+    line-height: 120px;
+  }
+
+  @include media($mobile) {
+    display: block;
   }
 }
