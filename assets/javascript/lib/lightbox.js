@@ -210,8 +210,8 @@
 
           windowWidth    = $(window).width();
           windowHeight   = $(window).height();
-          maxImageWidth  = windowWidth - self.containerLeftPadding - self.containerRightPadding - 20;
-          maxImageHeight = windowHeight - self.containerTopPadding - self.containerBottomPadding - 120;
+          maxImageWidth  = windowWidth - self.containerLeftPadding - self.containerRightPadding - 100;
+          maxImageHeight = windowHeight - self.containerTopPadding - self.containerBottomPadding - 190;
 
           // Is there a fitting issue?
           if ((preloader.width > maxImageWidth) || (preloader.height > maxImageHeight)) {

@@ -171,13 +171,22 @@ body:after {
   margin: 0 auto;
   text-align: center;
   line-height: 1.1em;
+
+  @include media($mobile) {
+    width: 100%;
+  }
 }
 
 .lb-data .lb-caption {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
-  line-height: 30px;
+  line-height: 35px;
   font-family: 'Ubuntu Condensed';
+
+  @include media($mobile) {
+    font-size: 40px;
+    line-height: 45px;  
+  }
 }
 
 .lb-data .lb-number {
