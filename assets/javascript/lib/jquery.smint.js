@@ -11,7 +11,7 @@ http://www.outyear.co.uk/smint/
 If you like Smint, or have suggestions on how it could be improved, send me a tweet @rabmyself
 
 */
-
+ 
 
 (function(){
 

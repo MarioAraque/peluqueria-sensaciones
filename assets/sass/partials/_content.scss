@@ -164,3 +164,34 @@ table {
     display: block;
   }
 }
+
+.product-list {
+  @include outer-container;
+
+  .product {
+    @include span-columns(4);
+    margin-bottom: 40px;
+    float: left;
+    text-align: center;
+
+    img {
+      @include size(45% auto);
+    }
+
+    &:nth-child(3n+1) {
+      clear: both;
+
+      @include media($mobile) {
+        clear: none;
+      }
+    }
+
+    @include media($mobile) {
+      @include span-columns(6);   
+
+      &:nth-child(2n+1) {
+        clear: both
+      }
+    } 
+  }
+}

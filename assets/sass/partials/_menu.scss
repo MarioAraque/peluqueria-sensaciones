@@ -17,13 +17,13 @@
     font-weight: normal;
 
     &.with-rotate-icon:hover {
-      .icon {
+      span {
         @include transform(rotate(360deg));
       }
     }
   }
 
-  .icon {
+  span {
     @include position(absolute, 1px null null 0);
     @include transition-duration(1.5s);
     color: #511554;
@@ -36,7 +36,7 @@
 
     li {
       @include margin(0);
-      width: 33%;
+      width: 25%;
       display: inline-block;
       text-align: center;
       line-height: 100px;
@@ -48,7 +48,7 @@
       display: block;
     }
 
-    .icon {
+    span {
       @include position(absolute, 65px null null 50%);
       @include margin(null null null -15px);
       font-size: 30px;

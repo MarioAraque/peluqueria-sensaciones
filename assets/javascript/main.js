@@ -17,7 +17,7 @@
       return false;
     });
     $windowHeight = $(window).height();
-    $('#main > div').each(function() {
+    $('#main > div').not('.shop').each(function() {
       if ($(this).height() < $windowHeight) {
         return $(this).height($windowHeight).find('> div').addClass('section-centered');
       }

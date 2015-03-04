@@ -24,6 +24,7 @@ module.exports = (grunt) ->
         files: "assets/javascript/script.js": [
           "assets/javascript/lib/jquery.js",
           "assets/javascript/lib/jquery.smint.js",
+          "assets/javascript/lib/lightbox.js",
           "assets/javascript/lib/slider.js",
           "assets/javascript/main.js"
         ]
@@ -39,7 +40,7 @@ module.exports = (grunt) ->
         files: ["assets/coffee/**/*.coffee"]
         tasks: ["coffee"]
       uglify:
-        files: ["assets/javascript/main.js"]
+        files: ["assets/**/*.js"]
         tasks: ["uglify"]
 
   grunt.loadNpmTasks "grunt-contrib-jade"

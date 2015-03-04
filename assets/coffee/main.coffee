@@ -15,7 +15,7 @@ $(document).ready ->
     false
 
   $windowHeight = $(window).height()
-  $('#main > div').each ->
+  $('#main > div').not('.shop').each ->
     $(this).height($windowHeight).find('> div').addClass 'section-centered' if $(this).height() < $windowHeight
 
   $(window).resize ->
