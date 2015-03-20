@@ -1,5 +1,13 @@
 module.exports = (grunt) ->
   grunt.initConfig
+    connect:
+      server:
+        options:
+          port: 9000
+          open: true
+          useAvailablePort: true
+          hostname: "localhost"
+
     jade:
       compile:
         options:
@@ -43,10 +51,11 @@ module.exports = (grunt) ->
         files: ["assets/**/*.js"]
         tasks: ["uglify"]
 
+  grunt.loadNpmTasks "grunt-contrib-connect"
   grunt.loadNpmTasks "grunt-contrib-jade"
   grunt.loadNpmTasks "grunt-contrib-sass"
   grunt.loadNpmTasks "grunt-contrib-uglify"
   grunt.loadNpmTasks "grunt-contrib-coffee"
   grunt.loadNpmTasks "grunt-contrib-watch"
 
-  grunt.registerTask "default", ["watch"]
+  grunt.registerTask "default", ["connect", "watch"]
