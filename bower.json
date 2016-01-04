@@ -1,0 +1,17 @@
+{
+  "name": "peluqueria-sensaciones",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "compass-breakpoint": "breakpoint-sass#~2.6.1",
+    "susy": "~2.2.9",
+    "gmaps": "~0.4.22",
+    "flickity": "~1.1.2",
+    "vide": "~0.4.1"
+  },
+  "devDependencies": {
+    "chai": "~3.4.2",
+    "mocha": "~2.3.4",
+    "flickity": "~1.1.2"
+  }
+}

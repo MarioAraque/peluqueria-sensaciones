@@ -1,0 +1,51 @@
+@include global-box-sizing(border-box);
+
+body, html {
+    height: 100%;
+    font-family: $primary-font;
+}
+
+body {
+    background-color: rgba(111, 30, 115, .8);
+    color: $primary-text-color;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+* {
+    outline:none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    font-family: $primary-font;
+}
+
+.container {
+	@include container;
+    padding: 0 5%;
+}
+
+/* Clear floats */
+.clearfix {
+	@include clearfix;
+}
+
+a {
+    text-decoration: none;
+    color: $primary-text-color;
+}
+
+.is-fixed {
+    overflow: hidden;
+}

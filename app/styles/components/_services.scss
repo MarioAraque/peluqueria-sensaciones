@@ -1,0 +1,45 @@
+.services {
+    display: inline-block;
+    width: 100%;
+}
+
+.service {
+    @include span(12 of 12 last);
+    text-align: center;
+    margin-bottom: 90px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint($min-tablet) {
+        @include span(4 of 12);
+        margin-bottom: 20px;
+
+        &:nth-child(3n) {
+            @include last;
+        }
+    }
+}
+
+.service-icon {
+    margin-bottom: 20px;
+
+    i:before {
+        font-size: 80px;
+    }
+}
+
+.service-text {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 100;
+    font-style: italic;
+
+    @include breakpoint($min-desktop) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}

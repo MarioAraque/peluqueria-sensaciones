@@ -1,0 +1,15 @@
+.video {
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+
+    @include breakpoint($min-tablet) {
+        max-height: 500px;
+    }
+
+    @include breakpoint($min-desktop) {
+        max-height: 80%;
+        min-height: 600px;
+    }
+}

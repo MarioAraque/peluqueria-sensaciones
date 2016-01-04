@@ -1,0 +1,22 @@
+.button {
+    height: 40px;
+    line-height: 36px;
+    padding: 0 15px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: background .2s linear;
+    background: transparent;
+}
+
+.button-primary {
+    border: solid 2px #E882ED;
+    color: $primary-text-color;
+
+    @include breakpoint($min-desktop) {
+        &:hover {
+            background: #E882ED;
+            color: $primary-text-color;
+        }
+    }
+}

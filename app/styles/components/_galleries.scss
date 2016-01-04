@@ -1,0 +1,89 @@
+.gallery {
+    position: relative;
+    height: 80%;
+    width: 100%;
+    color: $primary-text-color;
+    border-bottom: solid 20px $secondary-color;
+
+    @include breakpoint($min-tablet) {
+        max-height: 500px;
+    }
+
+    @include breakpoint($min-desktop) {
+        min-height: 600px;
+        max-height: 80%;
+    }
+}
+
+.gallery-container {
+    height: 100%;
+
+    .gallery-cell {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+}
+
+.gallery-message {
+    @include center-content;
+    width: 80%;
+    text-align: center;
+    color: $primary-text-color;
+}
+
+.gallery-message-title {
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 20px;
+    line-height: 30px;
+
+    @include breakpoint($min-desktop) {
+        font-size: 30px;
+        line-height: 36px;
+    }
+}
+
+.gallery-message-text {
+    font-size: 14px;
+    margin-bottom: 0;
+
+    @include breakpoint($min-tablet) {
+        margin-bottom: 15px;
+    }
+
+    @include breakpoint($min-desktop) {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+}
+
+.gallery-message-button-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    z-index: 3;
+
+    .button {
+        display: block;
+        background-color: #000;
+        text-align: center;
+        line-height: 60px;
+        height: 60px;
+    }
+
+    @include breakpoint($min-tablet) {
+        display: none;
+    }
+}
+
+.gallery-message-button {
+    display: none;
+
+    @include breakpoint($min-tablet) {
+        display: block;
+    }
+}

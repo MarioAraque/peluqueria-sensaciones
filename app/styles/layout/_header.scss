@@ -1,0 +1,30 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    .container {
+        position: relative;
+    }
+}
+
+.header-logo {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    background-color: rgba($primary-text-color, .8);
+    z-index: 9;
+
+    @include breakpoint($min-tablet) {
+        width: 100px;
+        top: 20px;
+    }
+
+    @include breakpoint($min-desktop) {
+        left: 0;
+        transform: none;
+    }
+}

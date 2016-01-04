@@ -1,0 +1,20 @@
+$font-path: '/fonts';
+$img-url: '/images';
+
+$primary-font: 'Lato', sans-serif;
+
+$susy: (
+  columns: 12,
+  container: 960px
+);
+
+/* Media queries */
+$max-mobile: max-width 480px;
+$min-tablet: min-width 480px;
+$min-desktop: min-width 769px;
+$max-mobile-landscape: (max-height 768px) (orientation landscape);
+
+/* Colors */
+$primary-color: #6F1E73;
+$secondary-color: #E882ED;
+$primary-text-color: #FFFFFF;

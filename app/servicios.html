@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="">
+  	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>peluqueria sensaciones</title>
+
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<!-- Place favicon.ico in the root directory -->
+
+		<!-- build:css styles/main.css -->
+		<link rel="stylesheet" href="styles/main.css">
+		<!-- endbuild -->
+	</head>
+  	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header-logo">
+					<a href="/"><img src="/images/logo.png" alt=""></a>
+				</div>
+				<button class="toggle-nav is-animated"><span></span></button>
+				<nav class="nav">
+					<ul>
+						<li><a href="/">Inicio</a></li>
+						<li class="active"><a href="servicios.html">Servicios</a></li>
+						<li><a href="tarifas.html">Tarifas</a></li>
+						<li><a href="contacto.html">Dónde estamos</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="gallery-message-button-mobile">
+			<a href="tel:962057666" class="button button-primary">llama y pide tu cita</a>
+		</div>
+		<section class="section section-services is-main-section">
+			<div class="section-content">
+				<div class="container">
+					<div class="section-title">Servicios</div>
+					<div class="services">
+						<div class="service">
+							<div class="service-icon"><i class="icon-long20"></i></div>
+							<div class="service-text">Trabajamos el color sin PPD ni amoníaco.</div>
+						</div>
+						<div class="service">
+							<div class="service-icon"><i class="icon-woman80"></i></div>
+							<div class="service-text">Lunes por la mañana, mayores de 65, descuentos en algunas tarifas.</div>
+						</div>
+						<div class="service">
+							<div class="service-icon"><i class="icon-curled10"></i></div>
+							<div class="service-text">Cuidamos de ti para que te sientas única con el mejor trato.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section-contact">
+			<div class="section-content">
+				<div class="container">
+					<div class="section-title">Dónde estamos</div>
+					<div class="section-text">
+						<p>Calle Brasil 20 Bajo</p>
+						<p><a href="tel:962057666">96 205 76 66</a></p>
+						<p>CITA PREVIA</p>
+						<p>46018 - Valencia</p>
+					</div>
+					<div class="map" data-lat="39.471344" data-long="-0.396661"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+		<script>
+		  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		  e.src='https://www.google-analytics.com/analytics.js';
+		  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		  ga('create','UA-XXXXX-X');ga('send','pageview');
+		</script>
+
+	    <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script>
+		<!-- build:js scripts/vendor.js -->
+		<!-- bower:js -->
+		<script src="/bower_components/jquery/dist/jquery.js"></script>
+		<script src="/bower_components/gmaps/gmaps.js"></script>
+		<script src="/bower_components/vide/dist/jquery.vide.js"></script>
+		<script src="/bower_components/flickity/dist/flickity.pkgd.js"></script>
+		<!-- endbower -->
+		<!-- endbuild -->
+
+		<!-- build:js scripts/main.js -->
+		<script src="scripts/main.js"></script>
+		<!-- endbuild -->
+	</body>
+</html>

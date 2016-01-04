@@ -1,0 +1,54 @@
+.price {
+    margin-bottom: 18px;
+    display: inline-block;
+    width: 100%;
+
+    > div {
+        @include span(9 of 12);
+
+        &:last-child {
+            @include span(3 of 12 last);
+        }
+    }
+
+    &.is-small {
+        .price-product {
+            font-size: 13px;
+        }
+    }
+
+    @include breakpoint($min-desktop) {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        padding-bottom: 25px;
+    }
+}
+
+.price-product {
+    padding-left: span(1);
+    text-transform: uppercase;
+
+    @include breakpoint($min-tablet) {
+        padding-left: span(2);
+    }
+}
+
+.price-value {
+    padding-left: span(1);
+    padding-right: span(1);
+    text-align: right;
+    font-weight: bold;
+
+    @include breakpoint($min-tablet) {
+        padding-right: span(2);
+    }
+}
+
+.price-note {
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,173 @@
+.toggle-nav {
+    display: block;
+    position: fixed;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 60px;
+    height: 60px;
+    font-size: 0;
+    text-indent: -9999px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border-radius: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    background-color: $primary-color;
+    z-index: 9;
+    top: 0;
+    left: 0;
+
+    span {
+        display: block;
+        position: absolute;
+        top: 27px;
+        left: 9px;
+        right: 9px;
+        height: 4px;
+        background: white;
+
+        &:before,
+        &:after {
+            position: absolute;
+            display: block;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: #fff;
+            content: "";
+        }
+
+        &:before {
+            top: -13px;
+        }
+
+        &:after {
+            bottom: -13px;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &.is-animated {
+        span {
+            transition: background 0s 0.3s;
+
+            &:before,
+            &:after {
+                transition-duration: 0.3s, 0.3s;
+                transition-delay: 0.3s, 0s;
+            }
+
+            &:before {
+                transition-property: top, transform;
+            }
+
+            &:after {
+                transition-property: bottom, transform;
+            }
+        }
+    }
+
+    &.is-active {
+        span {
+            background: none;
+
+            &:before {
+                top: 0;
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                bottom: 0;
+                transform: rotate(-45deg);
+            }
+
+            &:before,
+            &:after {
+                transition-delay: 0s, 0.3s;
+            }
+        }
+    }
+
+    @include breakpoint($min-desktop) {
+        display: none;
+    }
+}
+
+.nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    background-color: rgba(0, 0, 0, .9);
+
+    ul {
+        @include center-content;
+        width: 50%;
+    }
+
+    li {
+        margin-bottom: 20px;
+        line-height: 30px;
+
+        &.active a {
+            border-bottom: solid 2px $secondary-color;
+            line-height: 30px;
+            display: inline-block;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint($min-desktop) {
+            &:hover {
+                a {
+                    border-bottom: solid 2px $secondary-color;
+                    line-height: 30px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    a {
+        text-transform: uppercase;
+        color: $primary-text-color;
+    }
+
+    @include breakpoint($min-desktop) {
+        display: block;
+        position: relative;
+        float: right;
+        background-color: transparent;
+        width: auto;
+        margin-top: 30px;
+
+        ul {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: none;
+            width: auto;
+        }
+
+        li {
+            display: inline-block;
+            float: left;
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+    }
+}
